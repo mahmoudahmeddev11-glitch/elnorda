@@ -1,1128 +1,1052 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
 
-  <title>Elnorda | تفاصيل صغيرة تصنع ذكرى كبيرة</title>
-  <meta
-    name="description"
-    content="Elnorda — بوكيهات وتنسيقات ورد وهدايا مصممة بعناية، مع إمكانية الطلب والتنسيق حسب المناسبة."
-  />
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem("elnordaTheme") || "light";
+                const language = localStorage.getItem("elnordaLanguage") || "ar";
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                document.documentElement.dataset.theme = theme;
+                document.documentElement.lang = language;
+                document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+            } catch (error) {
+                document.documentElement.dataset.theme = "light";
+            }
+        })();
+    </script>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+    <title>Elnorda | Flower Studio</title>
 
-  <link rel="stylesheet" href="css/style.css" />
+    <meta
+        name="description"
+        content="Elnorda — بوكيهات وتنسيقات ورد وهدايا بتفاصيل أنيقة ومميزة."
+    >
+
+    <meta name="theme-color" content="#8d625f">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-page="home">
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
+<header class="site-header">
     <div class="container header-inner">
 
-      <a href="index.html" class="brand" aria-label="Elnorda Home">
-        <span class="brand-logo">
-          <img src="png/logo.png" alt="Elnorda" />
-        </span>
-
-        <span class="brand-copy">
-          <strong>ELNORDA</strong>
-          <small>FLOWER STUDIO</small>
-        </span>
-      </a>
-
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="materials.html">
-          <span data-ar="الخامات" data-en="Materials">الخامات</span>
-        </a>
-
-        <a href="courses.html">
-          <span data-ar="الكورسات" data-en="Courses">الكورسات</span>
-        </a>
-      </nav>
-
-      <div class="header-actions">
-
-        <button
-          class="icon-button"
-          id="themeToggle"
-          type="button"
-          aria-label="تغيير المظهر"
-        >
-          <i class="fa-solid fa-moon"></i>
-        </button>
-
-        <button
-          class="language-button"
-          id="languageToggle"
-          type="button"
-        >
-          EN
-        </button>
-
-        <a
-          class="header-whatsapp"
-          href="https://wa.me/201043861996"
-          target="_blank"
-          rel="noopener"
-          aria-label="WhatsApp"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-          <span data-ar="الحجز" data-en="Booking">الحجز</span>
-        </a>
-
-      </div>
-
-    </div>
-  </header>
-
-
-  <main>
-
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="hero-decoration hero-decoration-one"></div>
-      <div class="hero-decoration hero-decoration-two"></div>
-
-      <div class="container hero-grid">
-
-        <div class="hero-content reveal">
-
-          <div class="eyebrow">
-            <span></span>
-            <span data-ar="ELNORDA FLOWER STUDIO" data-en="ELNORDA FLOWER STUDIO">
-              ELNORDA FLOWER STUDIO
-            </span>
-            <span></span>
-          </div>
-
-          <h1>
-            <span
-              data-ar="تفاصيل صغيرة..."
-              data-en="Small details..."
+        <a class="brand" href="index.html" aria-label="Elnorda">
+            <img
+                src="png/logo.png"
+                alt="Elnorda"
+                data-alt-ar="إلنوردا"
+                data-alt-en="Elnorda"
             >
-              تفاصيل صغيرة...
-            </span>
-            <br />
-            <em
-              data-ar="تصنع ذكرى كبيرة."
-              data-en="create lasting memories."
-            >
-              تصنع ذكرى كبيرة.
-            </em>
-          </h1>
+        </a>
 
-          <p
-            class="hero-description"
-            data-ar="بوكيهات وتنسيقات ورد وهدايا مصممة بعناية، لتكون كل مناسبة لها تفاصيلها الخاصة."
-            data-en="Thoughtfully designed bouquets, floral arrangements and gifts made to give every occasion its own special character."
-          >
-            بوكيهات وتنسيقات ورد وهدايا مصممة بعناية، لتكون كل مناسبة لها تفاصيلها الخاصة.
-          </p>
-
-          <div class="hero-actions">
-
-            <a href="#products" class="btn btn-primary">
-              <span data-ar="استكشف البوكيهات" data-en="Explore Bouquets">
-                استكشف البوكيهات
-              </span>
-              <i class="fa-solid fa-arrow-left"></i>
-            </a>
+        <nav class="main-nav" aria-label="Main navigation">
 
             <a
-              href="https://wa.me/201043861996"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-secondary"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              <span data-ar="اطلب الآن" data-en="Order Now">
-                اطلب الآن
-              </span>
-            </a>
-
-          </div>
-
-          <div class="hero-note">
-            <i class="fa-solid fa-sparkles"></i>
-            <span
-              data-ar="تنسيق خاص حسب المناسبة والذوق"
-              data-en="Custom arrangements for every occasion"
-            >
-              تنسيق خاص حسب المناسبة والذوق
-            </span>
-          </div>
-
-        </div>
-
-
-        <div class="hero-visual reveal">
-
-          <div class="hero-frame">
-
-            <div class="hero-frame-top">
-              <span>01</span>
-              <span>ELNORDA</span>
-            </div>
-
-            <div class="flower-art">
-
-              <div class="stem stem-one"></div>
-              <div class="stem stem-two"></div>
-              <div class="stem stem-three"></div>
-
-              <div class="flower flower-one">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <div class="flower flower-two">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <div class="flower flower-three">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <div class="bouquet-wrap"></div>
-
-            </div>
-
-            <div class="hero-frame-bottom">
-              <span data-ar="HANDMADE WITH CARE" data-en="HANDMADE WITH CARE">
-                HANDMADE WITH CARE
-              </span>
-
-              <span>✦</span>
-
-              <span data-ar="SINCE 2024" data-en="SINCE 2024">
-                SINCE 2024
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ================= INTRO ================= -->
-    <section class="intro section">
-      <div class="container intro-grid">
-
-        <div class="section-label reveal">
-          <span>01</span>
-          <span data-ar="عن ELNORDA" data-en="ABOUT ELNORDA">
-            عن ELNORDA
-          </span>
-        </div>
-
-        <div class="intro-content reveal">
-
-          <h2>
-            <span
-              data-ar="الورد مش مجرد هدية."
-              data-en="Flowers are more than a gift."
-            >
-              الورد مش مجرد هدية.
-            </span>
-
-            <br />
-
-            <em
-              data-ar="هو إحساس بيتحفظ."
-              data-en="They preserve a feeling."
-            >
-              هو إحساس بيتحفظ.
-            </em>
-          </h2>
-
-          <p
-            data-ar="في Elnorda بنهتم بالتفاصيل الصغيرة اللي بتخلي البوكيه مختلف. من اختيار الألوان والتنسيق، لحد طريقة التغليف والتقديم."
-            data-en="At Elnorda, we care about the small details that make every bouquet different — from colors and composition to wrapping and presentation."
-          >
-            في Elnorda بنهتم بالتفاصيل الصغيرة اللي بتخلي البوكيه مختلف. من اختيار الألوان والتنسيق، لحد طريقة التغليف والتقديم.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ================= VALUES ================= -->
-    <section class="values">
-      <div class="container values-grid">
-
-        <article class="value-card reveal">
-          <span class="value-number">01</span>
-
-          <div class="value-icon">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-          </div>
-
-          <h3
-            data-ar="مصنوع بعناية"
-            data-en="Made With Care"
-          >
-            مصنوع بعناية
-          </h3>
-
-          <p
-            data-ar="كل تنسيق بيتعمل باهتمام بالتفاصيل من أول اختيار الورد لحد الشكل النهائي."
-            data-en="Every arrangement is created with attention to detail, from the flowers to the final presentation."
-          >
-            كل تنسيق بيتعمل باهتمام بالتفاصيل من أول اختيار الورد لحد الشكل النهائي.
-          </p>
-        </article>
-
-
-        <article class="value-card reveal">
-          <span class="value-number">02</span>
-
-          <div class="value-icon">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-
-          <h3
-            data-ar="تصميم خاص"
-            data-en="Personal Design"
-          >
-            تصميم خاص
-          </h3>
-
-          <p
-            data-ar="اختيارات مختلفة تناسب المناسبة والذوق والشخص اللي الهدية معمولة عشانه."
-            data-en="Different choices designed around the occasion, your taste and the person receiving the gift."
-          >
-            اختيارات مختلفة تناسب المناسبة والذوق والشخص اللي الهدية معمولة عشانه.
-          </p>
-        </article>
-
-
-        <article class="value-card reveal">
-          <span class="value-number">03</span>
-
-          <div class="value-icon">
-            <i class="fa-solid fa-box-open"></i>
-          </div>
-
-          <h3
-            data-ar="تجربة متكاملة"
-            data-en="Complete Experience"
-          >
-            تجربة متكاملة
-          </h3>
-
-          <p
-            data-ar="من اختيار البوكيه لحد التغليف والتسليم، كل خطوة معمولة عشان التجربة تكون مميزة."
-            data-en="From choosing the bouquet to wrapping and delivery, every step is designed to feel special."
-          >
-            من اختيار البوكيه لحد التغليف والتسليم، كل خطوة معمولة عشان التجربة تكون مميزة.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- ================= PRODUCTS ================= -->
-    <section class="products section" id="products">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="section-label">
-            <span>02</span>
-            <span data-ar="المجموعة" data-en="THE COLLECTION">
-              المجموعة
-            </span>
-          </div>
-
-          <div>
-            <h2
-              data-ar="اختيارات Elnorda"
-              data-en="The Elnorda Collection"
-            >
-              اختيارات Elnorda
-            </h2>
-
-            <p
-              data-ar="بوكيهات وتنسيقات مختلفة، وكل تصميم له طابعه الخاص."
-              data-en="Bouquets and arrangements, each with its own character."
-            >
-              بوكيهات وتنسيقات مختلفة، وكل تصميم له طابعه الخاص.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="product-grid">
-
-          <!-- Product 1 -->
-          <article class="product-card reveal">
-
-            <div class="product-image product-image-one">
-              <span class="product-number">01</span>
-
-              <div class="mini-bouquet">
-                <div class="mini-flower"></div>
-                <div class="mini-flower small"></div>
-                <div class="mini-flower tiny"></div>
-              </div>
-
-              <span class="product-tag">
-                <span data-ar="الأكثر طلبًا" data-en="MOST REQUESTED">
-                  الأكثر طلبًا
-                </span>
-              </span>
-            </div>
-
-            <div class="product-body">
-
-              <span
-                class="product-category"
-                data-ar="CLASSIC"
-                data-en="CLASSIC"
-              >
-                CLASSIC
-              </span>
-
-              <h3
-                data-ar="Elnorda Classic"
-                data-en="Elnorda Classic"
-              >
-                Elnorda Classic
-              </h3>
-
-              <p
-                data-ar="تنسيق هادئ وأنيق مناسب للهدايا والمناسبات المختلفة."
-                data-en="A refined arrangement made for gifts and special occasions."
-              >
-                تنسيق هادئ وأنيق مناسب للهدايا والمناسبات المختلفة.
-              </p>
-
-              <div class="product-footer">
-                <strong>XXX <small>EGP</small></strong>
-
-                <button
-                  type="button"
-                  class="order-product"
-                  data-product-ar="Elnorda Classic"
-                  data-product-en="Elnorda Classic"
-                >
-                  <span data-ar="اطلب" data-en="Order">اطلب</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- Product 2 -->
-          <article class="product-card reveal">
-
-            <div class="product-image product-image-two">
-              <span class="product-number">02</span>
-
-              <div class="baby-breath">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-              </div>
-            </div>
-
-            <div class="product-body">
-
-              <span class="product-category">
-                BABY'S BREATH
-              </span>
-
-              <h3
-                data-ar="بيبي كلينر"
-                data-en="Baby's Breath"
-              >
-                بيبي كلينر
-              </h3>
-
-              <p
-                data-ar="تنسيق ناعم وخفيف لمحبي التفاصيل البسيطة والأنيقة."
-                data-en="A soft and delicate arrangement for lovers of simple elegance."
-              >
-                تنسيق ناعم وخفيف لمحبي التفاصيل البسيطة والأنيقة.
-              </p>
-
-              <div class="product-footer">
-                <strong>XXX <small>EGP</small></strong>
-
-                <button
-                  type="button"
-                  class="order-product"
-                  data-product-ar="بيبي كلينر"
-                  data-product-en="Baby's Breath"
-                >
-                  <span data-ar="اطلب" data-en="Order">اطلب</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- Product 3 -->
-          <article class="product-card reveal">
-
-            <div class="product-image product-image-three">
-              <span class="product-number">03</span>
-
-              <div class="custom-art">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="product-body">
-
-              <span
-                class="product-category"
-                data-ar="CUSTOM"
-                data-en="CUSTOM"
-              >
-                CUSTOM
-              </span>
-
-              <h3
-                data-ar="Custom Design"
-                data-en="Custom Design"
-              >
-                Custom Design
-              </h3>
-
-              <p
-                data-ar="تصميم خاص حسب المناسبة والألوان والتفاصيل المطلوبة."
-                data-en="A personalized design based on your occasion, colors and preferences."
-              >
-                تصميم خاص حسب المناسبة والألوان والتفاصيل المطلوبة.
-              </p>
-
-              <div class="product-footer">
-                <strong>XXX <small>EGP</small></strong>
-
-                <button
-                  type="button"
-                  class="order-product"
-                  data-product-ar="Custom Design"
-                  data-product-en="Custom Design"
-                >
-                  <span data-ar="اطلب" data-en="Order">اطلب</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- Product 4 -->
-          <article class="product-card reveal">
-
-            <div class="product-image product-image-four">
-              <span class="product-number">04</span>
-
-              <div class="decor-art">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-
-            <div class="product-body">
-
-              <span
-                class="product-category"
-                data-ar="DECOR"
-                data-en="DECOR"
-              >
-                DECOR
-              </span>
-
-              <h3
-                data-ar="Flower Decoration"
-                data-en="Flower Decoration"
-              >
-                Flower Decoration
-              </h3>
-
-              <p
-                data-ar="تنسيقات للديكور والمساحات والمناسبات الخاصة."
-                data-en="Floral arrangements for spaces, events and special occasions."
-              >
-                تنسيقات للديكور والمساحات والمناسبات الخاصة.
-              </p>
-
-              <div class="product-footer">
-                <strong>XXX <small>EGP</small></strong>
-
-                <button
-                  type="button"
-                  class="order-product"
-                  data-product-ar="Flower Decoration"
-                  data-product-en="Flower Decoration"
-                >
-                  <span data-ar="اطلب" data-en="Order">اطلب</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ================= CUSTOM CTA ================= -->
-    <section class="custom-section">
-
-      <div class="container">
-
-        <div class="custom-box reveal">
-
-          <div class="custom-content">
-
-            <span class="custom-overline">
-              ELNORDA / CUSTOM
-            </span>
-
-            <h2
-              data-ar="مش لاقي التصميم المناسب؟"
-              data-en="Can't find the right design?"
-            >
-              مش لاقي التصميم المناسب؟
-            </h2>
-
-            <p
-              data-ar="قولنا المناسبة والتفاصيل اللي في بالك، ونساعدك نوصل لتنسيق يناسبك."
-              data-en="Tell us about the occasion and the details you have in mind, and we'll help create an arrangement that fits."
-            >
-              قولنا المناسبة والتفاصيل اللي في بالك، ونساعدك نوصل لتنسيق يناسبك.
-            </p>
-
-            <a
-              href="https://wa.me/201043861996"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-light"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              <span
-                data-ar="تواصل معنا"
-                data-en="Talk to us"
-              >
-                تواصل معنا
-              </span>
-            </a>
-
-          </div>
-
-          <div class="custom-mark">
-            <span>✦</span>
-            <strong>ELNORDA</strong>
-            <small>FLOWER STUDIO</small>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= OTHER SERVICES ================= -->
-    <section class="services section">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <div class="section-label">
-            <span>03</span>
-            <span
-              data-ar="أكثر من بوكيه"
-              data-en="MORE THAN BOUQUETS"
-            >
-              أكثر من بوكيه
-            </span>
-          </div>
-
-          <div>
-            <h2
-              data-ar="عالم Elnorda"
-              data-en="The Elnorda World"
-            >
-              عالم Elnorda
-            </h2>
-
-            <p
-              data-ar="من الورد للخامات والتعلم، كل احتياجاتك في مكان واحد."
-              data-en="From flowers and supplies to learning, everything in one place."
-            >
-              من الورد للخامات والتعلم، كل احتياجاتك في مكان واحد.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="service-grid">
-
-          <a href="materials.html" class="service-card reveal">
-
-            <div class="service-icon">
-              <i class="fa-solid fa-boxes-stacked"></i>
-            </div>
-
-            <div>
-              <span>ELNORDA / MATERIALS</span>
-
-              <h3
+                href="materials.html"
                 data-ar="الخامات"
                 data-en="Materials"
-              >
+            >
                 الخامات
-              </h3>
+            </a>
 
-              <p
-                data-ar="خامات وأدوات تساعدك في تنفيذ تنسيقاتك بنفسك."
-                data-en="Supplies and tools to help you create your own arrangements."
-              >
-                خامات وأدوات تساعدك في تنفيذ تنسيقاتك بنفسك.
-              </p>
-            </div>
-
-            <i class="fa-solid fa-arrow-left service-arrow"></i>
-
-          </a>
-
-
-          <a href="courses.html" class="service-card reveal">
-
-            <div class="service-icon">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-
-            <div>
-              <span>ELNORDA / COURSES</span>
-
-              <h3
+            <a
+                href="courses.html"
                 data-ar="الكورسات"
                 data-en="Courses"
-              >
+            >
                 الكورسات
-              </h3>
+            </a>
 
-              <p
-                data-ar="تعلم تنسيق الورد من خلال كورسات أونلاين وأوفلاين."
-                data-en="Learn floral arranging through online and offline courses."
-              >
-                تعلم تنسيق الورد من خلال كورسات أونلاين وأوفلاين.
-              </p>
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                id="languageToggle"
+                type="button"
+                aria-label="Change language"
+            >
+                <span id="languageText">EN</span>
+            </button>
+
+            <button
+                class="icon-button"
+                id="themeToggle"
+                type="button"
+                aria-label="Change theme"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <a
+                class="header-whatsapp"
+                href="https://wa.me/201043861996"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span
+                    data-ar="واتساب"
+                    data-en="WhatsApp"
+                >
+                    واتساب
+                </span>
+            </a>
+
+        </div>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero section">
+        <div class="container hero-grid">
+
+            <div class="hero-content reveal">
+
+                <span
+                    class="eyebrow"
+                    data-ar="ELNORDA · FLOWER STUDIO"
+                    data-en="ELNORDA · FLOWER STUDIO"
+                >
+                    ELNORDA · FLOWER STUDIO
+                </span>
+
+                <h1
+                    data-ar="تفاصيل صغيرة… تصنع ذكرى كبيرة."
+                    data-en="Small details… create unforgettable memories."
+                >
+                    تفاصيل صغيرة… تصنع ذكرى كبيرة.
+                </h1>
+
+                <p
+                    data-ar="في إلنوردا نصنع بوكيهات وتنسيقات ورد بتفاصيل هادئة وأنيقة، لتكون كل قطعة مناسبة للمناسبة والشخص الذي صنعت من أجله."
+                    data-en="At Elnorda, we create elegant flower bouquets and arrangements with thoughtful details, designed around every occasion and every person."
+                >
+                    في إلنوردا نصنع بوكيهات وتنسيقات ورد بتفاصيل هادئة وأنيقة، لتكون كل قطعة مناسبة للمناسبة والشخص الذي صنعت من أجله.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        class="btn btn-primary"
+                        href="#products"
+                        data-ar="استكشف البوكيهات"
+                        data-en="Explore Bouquets"
+                    >
+                        استكشف البوكيهات
+                    </a>
+
+                    <a
+                        class="btn btn-outline"
+                        href="https://wa.me/201043861996"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span
+                            data-ar="اطلب الآن"
+                            data-en="Order Now"
+                        >
+                            اطلب الآن
+                        </span>
+                    </a>
+
+                </div>
+
+                <div class="hero-note">
+                    <span class="note-line"></span>
+                    <span
+                        data-ar="تنسيق، تغليف، وتفاصيل تُصنع بحب"
+                        data-en="Arrangements, packaging, and details made with care"
+                    >
+                        تنسيق، تغليف، وتفاصيل تُصنع بحب
+                    </span>
+                </div>
+
             </div>
 
-            <i class="fa-solid fa-arrow-left service-arrow"></i>
 
-          </a>
+            <div class="hero-visual reveal">
+
+                <div class="hero-frame">
+
+                    <div class="hero-decoration hero-decoration-one"></div>
+                    <div class="hero-decoration hero-decoration-two"></div>
+
+                    <div class="hero-image-placeholder">
+
+                        <div class="floral-art">
+                            <span class="stem stem-1"></span>
+                            <span class="stem stem-2"></span>
+                            <span class="stem stem-3"></span>
+
+                            <span class="flower flower-1"></span>
+                            <span class="flower flower-2"></span>
+                            <span class="flower flower-3"></span>
+
+                            <span class="leaf leaf-1"></span>
+                            <span class="leaf leaf-2"></span>
+                            <span class="leaf leaf-3"></span>
+                        </div>
+
+                        <div class="hero-logo-mark">
+                            <img src="png/logo.png" alt="Elnorda">
+                        </div>
+
+                    </div>
+
+                    <div class="hero-caption">
+                        <span>01</span>
+                        <span
+                            data-ar="صُنع خصيصًا لك"
+                            data-en="Made specially for you"
+                        >
+                            صُنع خصيصًا لك
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-
-      </div>
-
     </section>
 
-  </main>
+
+    <!-- INTRO -->
+    <section class="intro section">
+        <div class="container">
+
+            <div class="section-heading centered reveal">
+
+                <span
+                    class="eyebrow"
+                    data-ar="ABOUT ELNORDA"
+                    data-en="ABOUT ELNORDA"
+                >
+                    ABOUT ELNORDA
+                </span>
+
+                <h2
+                    data-ar="ورد يحمل إحساسًا… وليس مجرد شكل."
+                    data-en="Flowers that carry a feeling, not just a look."
+                >
+                    ورد يحمل إحساسًا… وليس مجرد شكل.
+                </h2>
+
+                <p
+                    data-ar="نؤمن أن الهدية الجميلة تبدأ من اختيار التفاصيل الصحيحة. لذلك نهتم بالشكل، الألوان، التغليف، وطريقة تقديم كل قطعة."
+                    data-en="We believe a beautiful gift begins with the right details. That is why we care about the flowers, colors, packaging, and presentation of every piece."
+                >
+                    نؤمن أن الهدية الجميلة تبدأ من اختيار التفاصيل الصحيحة. لذلك نهتم بالشكل، الألوان، التغليف، وطريقة تقديم كل قطعة.
+                </p>
+
+            </div>
 
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
+            <div class="values-grid">
 
-    <div class="container">
+                <article class="value-card reveal">
+                    <span class="value-number">01</span>
 
-      <div class="footer-main">
+                    <div class="value-icon">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
 
-        <div class="footer-brand">
+                    <h3
+                        data-ar="تفاصيل شخصية"
+                        data-en="Personal Details"
+                    >
+                        تفاصيل شخصية
+                    </h3>
 
-          <a href="index.html" class="footer-logo">
-            <img src="png/logo.png" alt="Elnorda" />
-          </a>
-
-          <p
-            data-ar="تفاصيل صغيرة، مشاعر كبيرة. Elnorda مساحة للورد، الهدايا، والتفاصيل اللي بتفضل في الذاكرة."
-            data-en="Small details, meaningful feelings. Elnorda is a space for flowers, gifts and memorable details."
-          >
-            تفاصيل صغيرة، مشاعر كبيرة. Elnorda مساحة للورد، الهدايا، والتفاصيل اللي بتفضل في الذاكرة.
-          </p>
-
-          <div class="footer-socials">
-
-            <a
-              href="https://wa.me/201043861996"
-              target="_blank"
-              rel="noopener"
-              aria-label="WhatsApp"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-
-            <a
-              href="https://www.tiktok.com/@norda1022"
-              target="_blank"
-              rel="noopener"
-              aria-label="TikTok"
-            >
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-
-          </div>
-
-        </div>
+                    <p
+                        data-ar="كل تصميم يمكن أن يحمل طابعًا خاصًا يناسب المناسبة والشخص."
+                        data-en="Every design can have a personal touch that fits the occasion and the recipient."
+                    >
+                        كل تصميم يمكن أن يحمل طابعًا خاصًا يناسب المناسبة والشخص.
+                    </p>
+                </article>
 
 
-        <div class="footer-column">
+                <article class="value-card reveal">
+                    <span class="value-number">02</span>
 
-          <h4
-            data-ar="استكشف"
-            data-en="Explore"
-          >
-            استكشف
-          </h4>
+                    <div class="value-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
 
-          <a href="index.html">
-            <span data-ar="الرئيسية" data-en="Home">
-              الرئيسية
-            </span>
-          </a>
+                    <h3
+                        data-ar="تنسيق أنيق"
+                        data-en="Elegant Arrangements"
+                    >
+                        تنسيق أنيق
+                    </h3>
 
-          <a href="materials.html">
-            <span data-ar="الخامات" data-en="Materials">
-              الخامات
-            </span>
-          </a>
-
-          <a href="courses.html">
-            <span data-ar="الكورسات" data-en="Courses">
-              الكورسات
-            </span>
-          </a>
-
-        </div>
+                    <p
+                        data-ar="نهتم بتناسق الألوان والتفاصيل حتى تصل الهدية بالشكل الذي يليق بها."
+                        data-en="We carefully balance colors and details so your gift arrives beautifully presented."
+                    >
+                        نهتم بتناسق الألوان والتفاصيل حتى تصل الهدية بالشكل الذي يليق بها.
+                    </p>
+                </article>
 
 
-        <div class="footer-column">
+                <article class="value-card reveal">
+                    <span class="value-number">03</span>
 
-          <h4
-            data-ar="تواصل"
-            data-en="Contact"
-          >
-            تواصل
-          </h4>
+                    <div class="value-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
 
-          <a href="https://wa.me/201043861996" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            +20 10 43861996
-          </a>
+                    <h3
+                        data-ar="تجربة متكاملة"
+                        data-en="A Complete Experience"
+                    >
+                        تجربة متكاملة
+                    </h3>
 
-          <a href="https://www.tiktok.com/@norda1022" target="_blank" rel="noopener">
-            <i class="fa-brands fa-tiktok"></i>
-            @norda1022
-          </a>
+                    <p
+                        data-ar="من اختيار التصميم وحتى التغليف، نركز على أن تكون التجربة بسيطة ومميزة."
+                        data-en="From choosing the design to packaging, we keep the experience simple and memorable."
+                    >
+                        من اختيار التصميم وحتى التغليف، نركز على أن تكون التجربة بسيطة ومميزة.
+                    </p>
+                </article>
 
-        </div>
-
-
-        <div class="footer-column footer-cta">
-
-          <span class="footer-mini-title">
-            ELNORDA FLOWER STUDIO
-          </span>
-
-          <h4
-            data-ar="جاهز تختار التفاصيل؟"
-            data-en="Ready to choose your details?"
-          >
-            جاهز تختار التفاصيل؟
-          </h4>
-
-          <a
-            href="https://wa.me/201043861996"
-            target="_blank"
-            rel="noopener"
-            class="footer-whatsapp"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-
-            <span
-              data-ar="احجز من واتساب"
-              data-en="Book on WhatsApp"
-            >
-              احجز من واتساب
-            </span>
-
-          </a>
+            </div>
 
         </div>
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <span>
-          © <span id="currentYear"></span> ELNORDA
-        </span>
-
-        <span
-          data-ar="مصنوع بحب وتفاصيل"
-          data-en="Made with care & details"
-        >
-          مصنوع بحب وتفاصيل
-        </span>
-
-        <span>✦</span>
-
-      </div>
-
-    </div>
-
-  </footer>
+    </section>
 
 
-  <!-- ================= FIXED WHATSAPP ================= -->
-  <a
-    class="floating-whatsapp"
-    href="https://wa.me/201043861996"
-    target="_blank"
-    rel="noopener"
-    aria-label="WhatsApp Booking"
-  >
-    <span class="floating-whatsapp-icon">
-      <i class="fa-brands fa-whatsapp"></i>
-    </span>
+    <!-- PRODUCTS -->
+    <section class="products section" id="products">
+        <div class="container">
 
-    <span class="floating-whatsapp-text">
-      <strong
-        data-ar="الحجز عبر واتساب"
-        data-en="Book on WhatsApp"
-      >
-        الحجز عبر واتساب
-      </strong>
+            <div class="section-heading reveal">
 
-      <small
-        data-ar="تواصل معنا الآن"
-        data-en="Contact us now"
-      >
-        تواصل معنا الآن
-      </small>
-    </span>
-  </a>
+                <div>
+                    <span
+                        class="eyebrow"
+                        data-ar="OUR COLLECTION"
+                        data-en="OUR COLLECTION"
+                    >
+                        OUR COLLECTION
+                    </span>
+
+                    <h2
+                        data-ar="اختيارات من إلنوردا"
+                        data-en="Elnorda Collection"
+                    >
+                        اختيارات من إلنوردا
+                    </h2>
+                </div>
+
+                <p
+                    data-ar="يمكن تعديل التصميم والتفاصيل حسب الطلب."
+                    data-en="Design and details can be customized upon request."
+                >
+                    يمكن تعديل التصميم والتفاصيل حسب الطلب.
+                </p>
+
+            </div>
 
 
-  <!-- ================= ORDER MODAL ================= -->
-  <div
+            <div class="products-grid">
+
+                <article class="product-card reveal">
+
+                    <div class="product-image product-image-1">
+                        <span
+                            data-ar="ELNORDA"
+                            data-en="ELNORDA"
+                        >
+                            ELNORDA
+                        </span>
+                    </div>
+
+                    <div class="product-body">
+
+                        <span
+                            class="product-category"
+                            data-ar="بوكيه"
+                            data-en="Bouquet"
+                        >
+                            بوكيه
+                        </span>
+
+                        <h3
+                            data-ar="Elnorda Classic"
+                            data-en="Elnorda Classic"
+                        >
+                            Elnorda Classic
+                        </h3>
+
+                        <p
+                            data-ar="تنسيق أنيق وهادئ مناسب للهدايا والمناسبات المختلفة."
+                            data-en="A refined and elegant arrangement suitable for gifts and special occasions."
+                        >
+                            تنسيق أنيق وهادئ مناسب للهدايا والمناسبات المختلفة.
+                        </p>
+
+                        <div class="product-bottom">
+                            <strong>XXX EGP</strong>
+
+                            <button
+                                class="text-button order-product"
+                                type="button"
+                                data-product-ar="Elnorda Classic"
+                                data-product-en="Elnorda Classic"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <article class="product-card reveal">
+
+                    <div class="product-image product-image-2">
+                        <span
+                            data-ar="BABY'S BREATH"
+                            data-en="BABY'S BREATH"
+                        >
+                            BABY'S BREATH
+                        </span>
+                    </div>
+
+                    <div class="product-body">
+
+                        <span
+                            class="product-category"
+                            data-ar="بيبي كلينر"
+                            data-en="Baby's Breath"
+                        >
+                            بيبي كلينر
+                        </span>
+
+                        <h3
+                            data-ar="Baby's Breath"
+                            data-en="Baby's Breath"
+                        >
+                            Baby's Breath
+                        </h3>
+
+                        <p
+                            data-ar="اختيار ناعم وبسيط لمحبي التفاصيل الهادئة والمظهر الرقيق."
+                            data-en="A soft and delicate choice for those who love subtle and graceful arrangements."
+                        >
+                            اختيار ناعم وبسيط لمحبي التفاصيل الهادئة والمظهر الرقيق.
+                        </p>
+
+                        <div class="product-bottom">
+                            <strong>XXX EGP</strong>
+
+                            <button
+                                class="text-button order-product"
+                                type="button"
+                                data-product-ar="Baby's Breath"
+                                data-product-en="Baby's Breath"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <article class="product-card reveal">
+
+                    <div class="product-image product-image-3">
+                        <span
+                            data-ar="CUSTOM"
+                            data-en="CUSTOM"
+                        >
+                            CUSTOM
+                        </span>
+                    </div>
+
+                    <div class="product-body">
+
+                        <span
+                            class="product-category"
+                            data-ar="تصميم خاص"
+                            data-en="Custom Design"
+                        >
+                            تصميم خاص
+                        </span>
+
+                        <h3
+                            data-ar="Custom Design"
+                            data-en="Custom Design"
+                        >
+                            Custom Design
+                        </h3>
+
+                        <p
+                            data-ar="تصميم يتم تنفيذه حسب الألوان والمناسبة والتفاصيل المطلوبة."
+                            data-en="A custom arrangement designed around your preferred colors, occasion, and details."
+                        >
+                            تصميم يتم تنفيذه حسب الألوان والمناسبة والتفاصيل المطلوبة.
+                        </p>
+
+                        <div class="product-bottom">
+                            <strong
+                                data-ar="حسب الطلب"
+                                data-en="Custom"
+                            >
+                                حسب الطلب
+                            </strong>
+
+                            <button
+                                class="text-button order-product"
+                                type="button"
+                                data-product-ar="Custom Design"
+                                data-product-en="Custom Design"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <article class="product-card reveal">
+
+                    <div class="product-image product-image-4">
+                        <span
+                            data-ar="DECOR"
+                            data-en="DECOR"
+                        >
+                            DECOR
+                        </span>
+                    </div>
+
+                    <div class="product-body">
+
+                        <span
+                            class="product-category"
+                            data-ar="ديكور"
+                            data-en="Decor"
+                        >
+                            ديكور
+                        </span>
+
+                        <h3
+                            data-ar="Flower Decoration"
+                            data-en="Flower Decoration"
+                        >
+                            Flower Decoration
+                        </h3>
+
+                        <p
+                            data-ar="تنسيقات للديكور والمناسبات والمساحات التي تحتاج لمسة مختلفة."
+                            data-en="Floral arrangements for events, spaces, and occasions that need an elegant touch."
+                        >
+                            تنسيقات للديكور والمناسبات والمساحات التي تحتاج لمسة مختلفة.
+                        </p>
+
+                        <div class="product-bottom">
+                            <strong
+                                data-ar="حسب الطلب"
+                                data-en="Custom"
+                            >
+                                حسب الطلب
+                            </strong>
+
+                            <button
+                                class="text-button order-product"
+                                type="button"
+                                data-product-ar="Flower Decoration"
+                                data-product-en="Flower Decoration"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- MATERIALS TEASER -->
+    <section class="feature-section section">
+        <div class="container feature-grid">
+
+            <div class="feature-copy reveal">
+
+                <span
+                    class="eyebrow"
+                    data-ar="ELNORDA MATERIALS"
+                    data-en="ELNORDA MATERIALS"
+                >
+                    ELNORDA MATERIALS
+                </span>
+
+                <h2
+                    data-ar="كل ما تحتاجه لصناعة تنسيقك."
+                    data-en="Everything you need to create your arrangement."
+                >
+                    كل ما تحتاجه لصناعة تنسيقك.
+                </h2>
+
+                <p
+                    data-ar="نوفر مجموعة من الخامات والأدوات المستخدمة في تنسيق وتغليف الورد، لتكون الخامات قريبة منك في نفس المكان."
+                    data-en="Explore flowers, packaging materials, ribbons, accessories, and tools for creating your own arrangements."
+                >
+                    نوفر مجموعة من الخامات والأدوات المستخدمة في تنسيق وتغليف الورد، لتكون الخامات قريبة منك في نفس المكان.
+                </p>
+
+                <a
+                    class="btn btn-primary"
+                    href="materials.html"
+                    data-ar="استكشف الخامات"
+                    data-en="Explore Materials"
+                >
+                    استكشف الخامات
+                </a>
+
+            </div>
+
+
+            <div class="feature-art reveal">
+
+                <div class="feature-circle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="feature-label">
+                    <small>ELNORDA</small>
+                    <strong
+                        data-ar="MATERIALS"
+                        data-en="MATERIALS"
+                    >
+                        MATERIALS
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section section">
+        <div class="container">
+
+            <div class="cta-card reveal">
+
+                <span
+                    class="eyebrow"
+                    data-ar="LET'S CREATE SOMETHING BEAUTIFUL"
+                    data-en="LET'S CREATE SOMETHING BEAUTIFUL"
+                >
+                    LET'S CREATE SOMETHING BEAUTIFUL
+                </span>
+
+                <h2
+                    data-ar="لديك فكرة مختلفة؟ خلينا نحولها لتنسيق حقيقي."
+                    data-en="Have a different idea? Let's turn it into a real arrangement."
+                >
+                    لديك فكرة مختلفة؟ خلينا نحولها لتنسيق حقيقي.
+                </h2>
+
+                <p
+                    data-ar="أرسل تفاصيل فكرتك على واتساب وسنساعدك في اختيار التصميم المناسب."
+                    data-en="Send us your idea on WhatsApp and we will help you choose the right design."
+                >
+                    أرسل تفاصيل فكرتك على واتساب وسنساعدك في اختيار التصميم المناسب.
+                </p>
+
+                <a
+                    class="btn btn-light"
+                    href="https://wa.me/201043861996"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <span
+                        data-ar="تواصل معنا"
+                        data-en="Contact Us"
+                    >
+                        تواصل معنا
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<!-- ORDER MODAL -->
+<div
     class="modal"
     id="orderModal"
     aria-hidden="true"
     role="dialog"
     aria-modal="true"
-  >
-
-    <div class="modal-overlay"></div>
+    aria-labelledby="orderModalTitle"
+>
+    <div class="modal-overlay" data-close-modal></div>
 
     <div class="modal-box">
 
-      <button
-        type="button"
-        class="modal-close"
-        id="modalClose"
-        aria-label="Close"
-      >
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+        <button
+            class="modal-close"
+            type="button"
+            data-close-modal
+            aria-label="Close"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
-      <div class="modal-head">
-
-        <span>ELNORDA / ORDER</span>
+        <span
+            class="eyebrow"
+            data-ar="ORDER DETAILS"
+            data-en="ORDER DETAILS"
+        >
+            ORDER DETAILS
+        </span>
 
         <h2
-          data-ar="تفاصيل الطلب"
-          data-en="Order Details"
+            id="orderModalTitle"
+            data-ar="تفاصيل الطلب"
+            data-en="Order Details"
         >
-          تفاصيل الطلب
+            تفاصيل الطلب
         </h2>
 
         <p
-          data-ar="أكمل البيانات، وسيتم تحويلك مباشرةً إلى واتساب لإتمام الطلب."
-          data-en="Complete the details and you'll be redirected to WhatsApp to complete your order."
+            class="modal-description"
+            data-ar="أكمل البيانات وسنجهز لك رسالة الطلب على واتساب."
+            data-en="Fill in the details and we will prepare your WhatsApp order message."
         >
-          أكمل البيانات، وسيتم تحويلك مباشرةً إلى واتساب لإتمام الطلب.
+            أكمل البيانات وسنجهز لك رسالة الطلب على واتساب.
         </p>
 
-      </div>
+
+        <form id="orderForm">
+
+            <input type="hidden" id="selectedProduct">
+
+            <div class="form-group">
+                <label
+                    for="orderName"
+                    data-ar="الاسم"
+                    data-en="Name"
+                >
+                    الاسم
+                </label>
+
+                <input
+                    id="orderName"
+                    name="name"
+                    type="text"
+                    required
+                    data-placeholder-ar="اكتب الاسم"
+                    data-placeholder-en="Enter your name"
+                    placeholder="اكتب الاسم"
+                >
+            </div>
 
 
-      <form id="orderForm">
+            <div class="form-row">
 
-        <input type="hidden" id="selectedProduct" />
+                <div class="form-group">
+                    <label
+                        for="orderQuantity"
+                        data-ar="الكمية"
+                        data-en="Quantity"
+                    >
+                        الكمية
+                    </label>
 
-        <div class="form-grid">
-
-          <label>
-            <span data-ar="الاسم" data-en="Name">الاسم</span>
-            <input
-              type="text"
-              id="customerName"
-              required
-              placeholder="الاسم"
-              data-placeholder-ar="الاسم"
-              data-placeholder-en="Name"
-            />
-          </label>
-
-
-          <label>
-            <span data-ar="الكمية" data-en="Quantity">الكمية</span>
-            <input
-              type="number"
-              id="quantity"
-              min="1"
-              value="1"
-              required
-            />
-          </label>
+                    <input
+                        id="orderQuantity"
+                        name="quantity"
+                        type="number"
+                        min="1"
+                        value="1"
+                        required
+                    >
+                </div>
 
 
-          <label>
-            <span data-ar="رقم الهاتف" data-en="Phone">رقم الهاتف</span>
-            <input
-              type="tel"
-              id="customerPhone"
-              required
-              placeholder="رقم الهاتف"
-              data-placeholder-ar="رقم الهاتف"
-              data-placeholder-en="Phone"
-            />
-          </label>
+                <div class="form-group">
+                    <label
+                        for="orderPhone"
+                        data-ar="رقم الهاتف"
+                        data-en="Phone"
+                    >
+                        رقم الهاتف
+                    </label>
+
+                    <input
+                        id="orderPhone"
+                        name="phone"
+                        type="tel"
+                        required
+                        data-placeholder-ar="رقم الهاتف"
+                        data-placeholder-en="Phone number"
+                        placeholder="رقم الهاتف"
+                    >
+                </div>
+
+            </div>
 
 
-          <label>
-            <span data-ar="اسم المستلم" data-en="Recipient Name">
-              اسم المستلم
-            </span>
+            <div class="form-group">
+                <label
+                    for="recipientName"
+                    data-ar="اسم المستلم"
+                    data-en="Recipient Name"
+                >
+                    اسم المستلم
+                </label>
 
-            <input
-              type="text"
-              id="recipientName"
-              placeholder="اسم المستلم"
-              data-placeholder-ar="اسم المستلم"
-              data-placeholder-en="Recipient Name"
-            />
-          </label>
+                <input
+                    id="recipientName"
+                    name="recipient"
+                    type="text"
+                    required
+                    data-placeholder-ar="اسم الشخص المستلم"
+                    data-placeholder-en="Recipient name"
+                    placeholder="اسم الشخص المستلم"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label
+                    for="orderAddress"
+                    data-ar="العنوان"
+                    data-en="Address"
+                >
+                    العنوان
+                </label>
+
+                <input
+                    id="orderAddress"
+                    name="address"
+                    type="text"
+                    required
+                    data-placeholder-ar="عنوان التوصيل"
+                    data-placeholder-en="Delivery address"
+                    placeholder="عنوان التوصيل"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label
+                    for="orderNotes"
+                    data-ar="ملاحظات"
+                    data-en="Notes"
+                >
+                    ملاحظات
+                </label>
+
+                <textarea
+                    id="orderNotes"
+                    name="notes"
+                    rows="3"
+                    data-placeholder-ar="أي تفاصيل إضافية..."
+                    data-placeholder-en="Any additional details..."
+                    placeholder="أي تفاصيل إضافية..."
+                ></textarea>
+            </div>
+
+
+            <button class="btn btn-primary form-submit" type="submit">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span
+                    data-ar="إرسال الطلب على واتساب"
+                    data-en="Send Order on WhatsApp"
+                >
+                    إرسال الطلب على واتساب
+                </span>
+
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<!-- FLOATING WHATSAPP -->
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/201043861996"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+>
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span
+        data-ar="احجز عبر واتساب"
+        data-en="Book via WhatsApp"
+    >
+        احجز عبر واتساب
+    </span>
+</a>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+
+            <img src="png/logo.png" alt="Elnorda">
+
+            <p
+                data-ar="تفاصيل ورد وهدايا مصممة لتترك أثرًا جميلًا."
+                data-en="Thoughtfully designed flowers and gifts made to leave a beautiful impression."
+            >
+                تفاصيل ورد وهدايا مصممة لتترك أثرًا جميلًا.
+            </p>
 
         </div>
 
 
-        <label>
-          <span data-ar="العنوان" data-en="Address">العنوان</span>
+        <div class="footer-column">
 
-          <input
-            type="text"
-            id="customerAddress"
-            required
-            placeholder="العنوان"
-            data-placeholder-ar="العنوان"
-            data-placeholder-en="Address"
-          />
-        </label>
+            <h3
+                data-ar="استكشف"
+                data-en="Explore"
+            >
+                استكشف
+            </h3>
+
+            <a
+                href="materials.html"
+                data-ar="الخامات"
+                data-en="Materials"
+            >
+                الخامات
+            </a>
+
+            <a
+                href="courses.html"
+                data-ar="الكورسات"
+                data-en="Courses"
+            >
+                الكورسات
+            </a>
+
+        </div>
 
 
-        <label>
-          <span data-ar="ملاحظات إضافية" data-en="Additional Notes">
-            ملاحظات إضافية
-          </span>
+        <div class="footer-column">
 
-          <textarea
-            id="customerNotes"
-            rows="4"
-            placeholder="أي تفاصيل إضافية..."
-            data-placeholder-ar="أي تفاصيل إضافية..."
-            data-placeholder-en="Any additional details..."
-          ></textarea>
-        </label>
+            <h3
+                data-ar="تواصل"
+                data-en="Contact"
+            >
+                تواصل
+            </h3>
 
+            <a
+                href="https://wa.me/201043861996"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                +20 10 43861996
+            </a>
 
-        <button type="submit" class="modal-submit">
+            <a
+                href="https://www.tiktok.com/@norda1022"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+                TikTok
+            </a>
 
-          <i class="fa-brands fa-whatsapp"></i>
-
-          <span
-            data-ar="إرسال الطلب عبر واتساب"
-            data-en="Send Order via WhatsApp"
-          >
-            إرسال الطلب عبر واتساب
-          </span>
-
-        </button>
-
-      </form>
+        </div>
 
     </div>
 
-  </div>
+
+    <div class="container footer-bottom">
+
+        <span>
+            © <span id="currentYear"></span>
+            <span
+                data-ar="Elnorda. جميع الحقوق محفوظة."
+                data-en="Elnorda. All rights reserved."
+            >
+                Elnorda. جميع الحقوق محفوظة.
+            </span>
+        </span>
+
+        <span
+            data-ar="Made with care."
+            data-en="Made with care."
+        >
+            Made with care.
+        </span>
+
+    </div>
+
+</footer>
 
 
-  <script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>

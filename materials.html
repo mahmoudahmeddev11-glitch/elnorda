@@ -1,99 +1,114 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem("elnordaTheme") || "light";
+                const language = localStorage.getItem("elnordaLanguage") || "ar";
 
-    <meta
-        name="theme-color"
-        content="#f7f0ea"
-    >
+                document.documentElement.dataset.theme = theme;
+                document.documentElement.lang = language;
+                document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+            } catch (error) {
+                document.documentElement.dataset.theme = "light";
+            }
+        })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Elnorda | Materials</title>
+
+    <meta
+        name="description"
+        content="Elnorda materials and supplies for flower arrangements."
+    >
+
+    <meta name="theme-color" content="#8d625f">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
     <link
         rel="stylesheet"
-        href="./css/style.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="inner-page">
+<body data-page="materials">
 
 <header class="site-header">
 
-    <div class="header-main container">
+    <div class="container header-inner">
 
-        <a href="./index.html" class="brand">
-
-            <img
-                src="./png/logo.png"
-                alt="Elnorda"
-                class="brand-logo"
-            >
-
+        <a class="brand" href="index.html" aria-label="Elnorda">
+            <img src="png/logo.png" alt="Elnorda">
         </a>
 
-
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
 
             <a
-                href="./materials.html"
-                class="nav-link active"
-                data-i18n="nav-materials"
+                href="index.html"
+                data-ar="الرئيسية"
+                data-en="Home"
             >
-                الخامات
+                الرئيسية
             </a>
 
             <a
-                href="./courses.html"
-                class="nav-link"
-                data-i18n="nav-courses"
+                href="courses.html"
+                data-ar="الكورسات"
+                data-en="Courses"
             >
                 الكورسات
             </a>
 
         </nav>
 
-
         <div class="header-actions">
 
             <button
-                class="icon-btn"
-                id="themeToggle"
+                class="icon-button"
+                id="languageToggle"
                 type="button"
+                aria-label="Change language"
             >
-                <span id="themeIcon">☾</span>
+                <span id="languageText">EN</span>
             </button>
 
             <button
-                class="language-btn"
-                id="languageToggle"
+                class="icon-button"
+                id="themeToggle"
                 type="button"
+                aria-label="Change theme"
             >
-                EN
+                <i class="fa-solid fa-moon"></i>
             </button>
 
             <a
+                class="header-whatsapp"
                 href="https://wa.me/201043861996"
                 target="_blank"
                 rel="noopener"
-                class="header-whatsapp"
             >
-                WhatsApp
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span
+                    data-ar="واتساب"
+                    data-en="WhatsApp"
+                >
+                    واتساب
+                </span>
             </a>
 
         </div>
@@ -105,28 +120,30 @@
 
 <main>
 
-    <section class="page-hero">
+    <section class="page-hero section">
 
-        <div class="container">
+        <div class="container page-hero-inner reveal">
 
             <span
-                class="section-kicker"
-                data-i18n="materials-kicker"
+                class="eyebrow"
+                data-ar="ELNORDA MATERIALS"
+                data-en="ELNORDA MATERIALS"
             >
-                ELNORDA · MATERIALS
+                ELNORDA MATERIALS
             </span>
 
-
-            <h1 data-i18n="materials-title">
-                كل الخامات اللي تحتاجها
-                <br>
-                لتصنع تنسيقك الخاص.
+            <h1
+                data-ar="الخامات التي تبدأ منها التفاصيل."
+                data-en="The materials where every detail begins."
+            >
+                الخامات التي تبدأ منها التفاصيل.
             </h1>
 
-
-            <p data-i18n="materials-intro">
-                خامات مختارة لتنسيق الزهور والتغليف
-                والتفاصيل النهائية.
+            <p
+                data-ar="مجموعة مختارة من الخامات والأدوات التي تساعد على تنفيذ وتغليف تنسيقات الورد بشكل أنيق ومرتب."
+                data-en="A curated collection of materials and tools for creating and packaging beautiful flower arrangements."
+            >
+                مجموعة مختارة من الخامات والأدوات التي تساعد على تنفيذ وتغليف تنسيقات الورد بشكل أنيق ومرتب.
             </p>
 
         </div>
@@ -134,140 +151,243 @@
     </section>
 
 
-    <section class="inner-content section">
+    <section class="materials-section section">
 
         <div class="container">
+
+            <div class="section-heading centered reveal">
+
+                <span
+                    class="eyebrow"
+                    data-ar="OUR MATERIALS"
+                    data-en="OUR MATERIALS"
+                >
+                    OUR MATERIALS
+                </span>
+
+                <h2
+                    data-ar="الخامات والأدوات"
+                    data-en="Materials & Supplies"
+                >
+                    الخامات والأدوات
+                </h2>
+
+                <p
+                    data-ar="كل منتج له استخدامه، ويمكن التواصل معنا لمعرفة التفاصيل والكميات المتاحة."
+                    data-en="Each item has its own use. Contact us for availability, quantities, and details."
+                >
+                    كل منتج له استخدامه، ويمكن التواصل معنا لمعرفة التفاصيل والكميات المتاحة.
+                </p>
+
+            </div>
+
 
             <div class="materials-grid">
 
                 <article class="material-card reveal">
 
-                    <div class="material-icon">
-                        ✦
+                    <div class="material-image material-image-1">
+                        <i class="fa-solid fa-leaf"></i>
                     </div>
 
-                    <span>01</span>
+                    <div class="material-body">
 
-                    <h2 data-i18n="material-one-title">
-                        Baby's Breath
-                    </h2>
+                        <span
+                            class="product-category"
+                            data-ar="ورد وخامات"
+                            data-en="Flowers & Materials"
+                        >
+                            ورد وخامات
+                        </span>
 
-                    <p data-i18n="material-one-text">
-                        خامات مناسبة لتنسيقات البيبي كلينر
-                        والتفاصيل الناعمة.
-                    </p>
+                        <h3
+                            data-ar="Baby's Breath"
+                            data-en="Baby's Breath"
+                        >
+                            Baby's Breath
+                        </h3>
 
-                    <strong>
-                        XXX EGP
-                    </strong>
+                        <p
+                            data-ar="بيبي كلينر مناسب للتنسيقات والبوكيهات والتفاصيل الصغيرة."
+                            data-en="Baby's Breath for bouquets, arrangements, and delicate floral details."
+                        >
+                            بيبي كلينر مناسب للتنسيقات والبوكيهات والتفاصيل الصغيرة.
+                        </p>
 
-                    <button
-                        class="material-order"
-                        type="button"
-                        data-material="Baby's Breath"
-                        data-i18n="material-order"
-                    >
-                        طلب الخامة
-                    </button>
+                        <div class="material-footer">
+
+                            <strong>XXX EGP</strong>
+
+                            <a
+                                class="text-button"
+                                href="https://wa.me/201043861996"
+                                target="_blank"
+                                rel="noopener"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
                 <article class="material-card reveal">
 
-                    <div class="material-icon">
-                        ◇
+                    <div class="material-image material-image-2">
+                        <i class="fa-solid fa-box-open"></i>
                     </div>
 
-                    <span>02</span>
+                    <div class="material-body">
 
-                    <h2 data-i18n="material-two-title">
-                        Packaging
-                    </h2>
+                        <span
+                            class="product-category"
+                            data-ar="تغليف"
+                            data-en="Packaging"
+                        >
+                            تغليف
+                        </span>
 
-                    <p data-i18n="material-two-text">
-                        خامات تغليف تساعدك تطلع الشكل النهائي
-                        بشكل أنيق ومرتب.
-                    </p>
+                        <h3
+                            data-ar="Packaging"
+                            data-en="Packaging"
+                        >
+                            Packaging
+                        </h3>
 
-                    <strong>
-                        XXX EGP
-                    </strong>
+                        <p
+                            data-ar="خامات تغليف تساعد على تقديم البوكيه بشكل مرتب وأنيق."
+                            data-en="Packaging materials that help present every bouquet beautifully and professionally."
+                        >
+                            خامات تغليف تساعد على تقديم البوكيه بشكل مرتب وأنيق.
+                        </p>
 
-                    <button
-                        class="material-order"
-                        type="button"
-                        data-material="Packaging"
-                        data-i18n="material-order"
-                    >
-                        طلب الخامة
-                    </button>
+                        <div class="material-footer">
+
+                            <strong>XXX EGP</strong>
+
+                            <a
+                                class="text-button"
+                                href="https://wa.me/201043861996"
+                                target="_blank"
+                                rel="noopener"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
                 <article class="material-card reveal">
 
-                    <div class="material-icon">
-                        ❋
+                    <div class="material-image material-image-3">
+                        <i class="fa-solid fa-ribbon"></i>
                     </div>
 
-                    <span>03</span>
+                    <div class="material-body">
 
-                    <h2 data-i18n="material-three-title">
-                        Ribbons & Accessories
-                    </h2>
+                        <span
+                            class="product-category"
+                            data-ar="إكسسوارات"
+                            data-en="Accessories"
+                        >
+                            إكسسوارات
+                        </span>
 
-                    <p data-i18n="material-three-text">
-                        شرائط وإكسسوارات لإضافة اللمسة
-                        النهائية للتنسيق.
-                    </p>
+                        <h3
+                            data-ar="Ribbons & Accessories"
+                            data-en="Ribbons & Accessories"
+                        >
+                            Ribbons & Accessories
+                        </h3>
 
-                    <strong>
-                        XXX EGP
-                    </strong>
+                        <p
+                            data-ar="شرائط وإكسسوارات لإضافة اللمسة الأخيرة للتنسيق."
+                            data-en="Ribbons and accessories that add the finishing touch to your arrangement."
+                        >
+                            شرائط وإكسسوارات لإضافة اللمسة الأخيرة للتنسيق.
+                        </p>
 
-                    <button
-                        class="material-order"
-                        type="button"
-                        data-material="Ribbons & Accessories"
-                        data-i18n="material-order"
-                    >
-                        طلب الخامة
-                    </button>
+                        <div class="material-footer">
+
+                            <strong>XXX EGP</strong>
+
+                            <a
+                                class="text-button"
+                                href="https://wa.me/201043861996"
+                                target="_blank"
+                                rel="noopener"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
                 <article class="material-card reveal">
 
-                    <div class="material-icon">
-                        ○
+                    <div class="material-image material-image-4">
+                        <i class="fa-solid fa-scissors"></i>
                     </div>
 
-                    <span>04</span>
+                    <div class="material-body">
 
-                    <h2 data-i18n="material-four-title">
-                        Tools
-                    </h2>
+                        <span
+                            class="product-category"
+                            data-ar="أدوات"
+                            data-en="Tools"
+                        >
+                            أدوات
+                        </span>
 
-                    <p data-i18n="material-four-text">
-                        أدوات تساعدك في تنفيذ وتنسيق
-                        البوكيهات والتصميمات.
-                    </p>
+                        <h3
+                            data-ar="Flower Tools"
+                            data-en="Flower Tools"
+                        >
+                            Flower Tools
+                        </h3>
 
-                    <strong>
-                        XXX EGP
-                    </strong>
+                        <p
+                            data-ar="مجموعة من الأدوات المستخدمة في تنفيذ وتجهيز تنسيقات الورد."
+                            data-en="Useful tools for preparing and creating professional flower arrangements."
+                        >
+                            مجموعة من الأدوات المستخدمة في تنفيذ وتجهيز تنسيقات الورد.
+                        </p>
 
-                    <button
-                        class="material-order"
-                        type="button"
-                        data-material="Tools"
-                        data-i18n="material-order"
-                    >
-                        طلب الخامة
-                    </button>
+                        <div class="material-footer">
+
+                            <strong>XXX EGP</strong>
+
+                            <a
+                                class="text-button"
+                                href="https://wa.me/201043861996"
+                                target="_blank"
+                                rel="noopener"
+                                data-ar="اطلب"
+                                data-en="Order"
+                            >
+                                اطلب
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
@@ -278,36 +398,43 @@
     </section>
 
 
-    <section class="cta-section section">
+    <section class="info-strip section">
 
         <div class="container">
 
-            <div class="cta-box reveal">
+            <div class="info-strip-inner reveal">
 
-                <span
-                    class="section-kicker"
-                    data-i18n="materials-cta-kicker"
-                >
-                    BUILD YOUR OWN
-                </span>
+                <div>
+                    <span
+                        class="eyebrow"
+                        data-ar="NEED HELP?"
+                        data-en="NEED HELP?"
+                    >
+                        NEED HELP?
+                    </span>
 
-                <h2 data-i18n="materials-cta-title">
-                    عندك خامة معينة في بالك؟
-                </h2>
-
-                <p data-i18n="materials-cta-text">
-                    ابعتلنا اللي محتاجه ونتواصل معاك
-                    لمعرفة التفاصيل والتوفر.
-                </p>
+                    <h2
+                        data-ar="مش متأكد من الخامة المناسبة؟"
+                        data-en="Not sure which material you need?"
+                    >
+                        مش متأكد من الخامة المناسبة؟
+                    </h2>
+                </div>
 
                 <a
+                    class="btn btn-primary"
                     href="https://wa.me/201043861996"
                     target="_blank"
                     rel="noopener"
-                    class="btn btn-light"
-                    data-i18n="materials-cta-button"
                 >
-                    تواصل معنا
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <span
+                        data-ar="اسألنا على واتساب"
+                        data-en="Ask us on WhatsApp"
+                    >
+                        اسألنا على واتساب
+                    </span>
                 </a>
 
             </div>
@@ -319,204 +446,127 @@
 </main>
 
 
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/201043861996"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+>
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span
+        data-ar="تواصل عبر واتساب"
+        data-en="Chat on WhatsApp"
+    >
+        تواصل عبر واتساب
+    </span>
+</a>
+
+
 <footer class="site-footer">
 
-    <div class="container footer-inner">
+    <div class="container footer-main">
 
         <div class="footer-brand">
 
-            <img
-                src="./png/logo.png"
-                alt="Elnorda"
-            >
+            <img src="png/logo.png" alt="Elnorda">
 
-            <p data-i18n="footer-text">
-                Flowers, details & beautiful moments.
+            <p
+                data-ar="الخامات الصحيحة تصنع فرقًا في النتيجة."
+                data-en="The right materials make a difference."
+            >
+                الخامات الصحيحة تصنع فرقًا في النتيجة.
             </p>
 
         </div>
 
 
-        <div class="footer-links">
+        <div class="footer-column">
+
+            <h3
+                data-ar="استكشف"
+                data-en="Explore"
+            >
+                استكشف
+            </h3>
 
             <a
-                href="./index.html"
-                data-i18n="nav-home"
+                href="index.html"
+                data-ar="الرئيسية"
+                data-en="Home"
             >
                 الرئيسية
             </a>
 
             <a
-                href="./courses.html"
-                data-i18n="nav-courses"
+                href="courses.html"
+                data-ar="الكورسات"
+                data-en="Courses"
             >
                 الكورسات
             </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3
+                data-ar="تواصل"
+                data-en="Contact"
+            >
+                تواصل
+            </h3>
 
             <a
                 href="https://wa.me/201043861996"
                 target="_blank"
                 rel="noopener"
             >
-                WhatsApp
+                <i class="fa-brands fa-whatsapp"></i>
+                +20 10 43861996
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@norda1022"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+                TikTok
             </a>
 
         </div>
 
+    </div>
 
-        <div class="footer-bottom">
 
-            <span>
-                © <span id="year"></span> Elnorda
+    <div class="container footer-bottom">
+
+        <span>
+            © <span id="currentYear"></span>
+            <span
+                data-ar="Elnorda. جميع الحقوق محفوظة."
+                data-en="Elnorda. All rights reserved."
+            >
+                Elnorda. جميع الحقوق محفوظة.
             </span>
+        </span>
 
-            <span data-i18n="footer-rights">
-                جميع الحقوق محفوظة
-            </span>
-
-        </div>
+        <span
+            data-ar="Made with care."
+            data-en="Made with care."
+        >
+            Made with care.
+        </span>
 
     </div>
 
 </footer>
 
 
-<div
-    class="modal"
-    id="materialModal"
-    aria-hidden="true"
->
-
-    <div
-        class="modal-overlay"
-        data-close-modal
-    ></div>
-
-
-    <div
-        class="modal-dialog"
-        role="dialog"
-        aria-modal="true"
-    >
-
-        <button
-            class="modal-close"
-            type="button"
-            data-close-modal
-        >
-            ×
-        </button>
-
-
-        <span
-            class="section-kicker"
-            data-i18n="material-modal-kicker"
-        >
-            MATERIAL ORDER
-        </span>
-
-
-        <h2 data-i18n="material-modal-title">
-            طلب الخامة
-        </h2>
-
-
-        <p
-            class="modal-subtitle"
-            data-i18n="material-modal-text"
-        >
-            اكتب بياناتك والكمية المطلوبة.
-        </p>
-
-
-        <form id="materialForm">
-
-            <input
-                type="hidden"
-                id="selectedMaterial"
-            >
-
-
-            <label>
-
-                <span data-i18n="form-name">
-                    الاسم
-                </span>
-
-                <input
-                    type="text"
-                    id="materialName"
-                    required
-                    placeholder="الاسم"
-                >
-
-            </label>
-
-
-            <label>
-
-                <span data-i18n="form-phone">
-                    رقم الهاتف
-                </span>
-
-                <input
-                    type="tel"
-                    id="materialPhone"
-                    required
-                    placeholder="01xxxxxxxxx"
-                >
-
-            </label>
-
-
-            <label>
-
-                <span data-i18n="form-quantity">
-                    الكمية
-                </span>
-
-                <input
-                    type="number"
-                    id="materialQuantity"
-                    min="1"
-                    value="1"
-                    required
-                >
-
-            </label>
-
-
-            <label>
-
-                <span data-i18n="form-note">
-                    ملاحظات
-                </span>
-
-                <textarea
-                    id="materialNote"
-                    rows="4"
-                    placeholder="أي تفاصيل إضافية..."
-                ></textarea>
-
-            </label>
-
-
-            <button
-                class="btn btn-primary modal-submit"
-                type="submit"
-                data-i18n="material-submit"
-            >
-                إرسال الطلب
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-
-<script src="./js/main.js"></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>

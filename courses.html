@@ -1,516 +1,724 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem("elnordaTheme") || "light";
+                const language = localStorage.getItem("elnordaLanguage") || "ar";
 
-    <meta
-        name="theme-color"
-        content="#f7f0ea"
-    >
+                document.documentElement.dataset.theme = theme;
+                document.documentElement.lang = language;
+                document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+            } catch (error) {
+                document.documentElement.dataset.theme = "light";
+            }
+        })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Elnorda | Courses</title>
+
+    <meta
+        name="description"
+        content="Elnorda courses — online and offline flower arrangement courses."
+    >
+
+    <meta name="theme-color" content="#8d625f">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
     <link
         rel="stylesheet"
-        href="./css/style.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="inner-page">
+<body data-page="courses">
 
 <header class="site-header">
+    <div class="container header-inner">
 
-    <div class="header-main container">
-
-        <a href="./index.html" class="brand">
-            <img
-                src="./png/logo.png"
-                alt="Elnorda"
-                class="brand-logo"
-            >
+        <a class="brand" href="index.html" aria-label="Elnorda">
+            <img src="png/logo.png" alt="Elnorda">
         </a>
 
-
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
 
             <a
-                href="./materials.html"
-                class="nav-link"
-                data-i18n="nav-materials"
+                href="index.html"
+                data-ar="الرئيسية"
+                data-en="Home"
+            >
+                الرئيسية
+            </a>
+
+            <a
+                href="materials.html"
+                data-ar="الخامات"
+                data-en="Materials"
             >
                 الخامات
             </a>
 
-            <a
-                href="./courses.html"
-                class="nav-link active"
-                data-i18n="nav-courses"
-            >
-                الكورسات
-            </a>
-
         </nav>
-
 
         <div class="header-actions">
 
             <button
-                class="icon-btn"
-                id="themeToggle"
+                class="icon-button"
+                id="languageToggle"
                 type="button"
+                aria-label="Change language"
             >
-                <span id="themeIcon">☾</span>
+                <span id="languageText">EN</span>
             </button>
 
             <button
-                class="language-btn"
-                id="languageToggle"
+                class="icon-button"
+                id="themeToggle"
                 type="button"
+                aria-label="Change theme"
             >
-                EN
+                <i class="fa-solid fa-moon"></i>
             </button>
+
+            <a
+                class="header-whatsapp"
+                href="https://wa.me/201043861996"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span
+                    data-ar="واتساب"
+                    data-en="WhatsApp"
+                >
+                    واتساب
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="page-hero section">
+        <div class="container page-hero-inner reveal">
+
+            <span
+                class="eyebrow"
+                data-ar="ELNORDA ACADEMY"
+                data-en="ELNORDA ACADEMY"
+            >
+                ELNORDA ACADEMY
+            </span>
+
+            <h1
+                data-ar="تعلم فن تنسيق الورد بطريقتك."
+                data-en="Learn the art of flower arranging your way."
+            >
+                تعلم فن تنسيق الورد بطريقتك.
+            </h1>
+
+            <p
+                data-ar="كورسات عملية تساعدك على فهم أساسيات تنسيق البوكيهات، اختيار الخامات، والتعامل مع التفاصيل من البداية حتى الشكل النهائي."
+                data-en="Practical courses covering bouquet arrangement, material selection, and the details that take your work from the first step to the final result."
+            >
+                كورسات عملية تساعدك على فهم أساسيات تنسيق البوكيهات، اختيار الخامات، والتعامل مع التفاصيل من البداية حتى الشكل النهائي.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="courses-section section">
+        <div class="container">
+
+            <div class="section-heading centered reveal">
+
+                <span
+                    class="eyebrow"
+                    data-ar="OUR COURSES"
+                    data-en="OUR COURSES"
+                >
+                    OUR COURSES
+                </span>
+
+                <h2
+                    data-ar="اختر طريقة التعلم المناسبة"
+                    data-en="Choose the learning format that suits you"
+                >
+                    اختر طريقة التعلم المناسبة
+                </h2>
+
+            </div>
+
+
+            <div class="courses-grid">
+
+                <!-- ONLINE -->
+                <article class="course-card reveal">
+
+                    <div class="course-number">01</div>
+
+                    <div class="course-icon">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+
+                    <span
+                        class="course-type"
+                        data-ar="ONLINE"
+                        data-en="ONLINE"
+                    >
+                        ONLINE
+                    </span>
+
+                    <h2
+                        data-ar="الكورس الأونلاين"
+                        data-en="Online Course"
+                    >
+                        الكورس الأونلاين
+                    </h2>
+
+                    <p
+                        data-ar="تعلم من مكانك وبالسرعة المناسبة لك، مع محتوى منظم يساعدك على بناء أساس قوي في تنسيق الورد."
+                        data-en="Learn from wherever you are at your own pace with structured content that builds a strong foundation in flower arranging."
+                    >
+                        تعلم من مكانك وبالسرعة المناسبة لك، مع محتوى منظم يساعدك على بناء أساس قوي في تنسيق الورد.
+                    </p>
+
+                    <ul class="course-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+
+                            <span
+                                data-ar="أساسيات تنسيق الورد"
+                                data-en="Flower arrangement basics"
+                            >
+                                أساسيات تنسيق الورد
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+
+                            <span
+                                data-ar="اختيار الخامات المناسبة"
+                                data-en="Choosing the right materials"
+                            >
+                                اختيار الخامات المناسبة
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+
+                            <span
+                                data-ar="تطبيقات عملية"
+                                data-en="Practical applications"
+                            >
+                                تطبيقات عملية
+                            </span>
+                        </li>
+
+                    </ul>
+
+                    <div class="course-footer">
+
+                        <div>
+                            <small
+                                data-ar="السعر"
+                                data-en="Price"
+                            >
+                                السعر
+                            </small>
+
+                            <strong>XXX EGP</strong>
+                        </div>
+
+                        <button
+                            class="btn btn-primary register-course"
+                            type="button"
+                            data-course-ar="الكورس الأونلاين"
+                            data-course-en="Online Course"
+                            data-ar="التسجيل"
+                            data-en="Register"
+                        >
+                            التسجيل
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OFFLINE -->
+                <article class="course-card course-card-featured reveal">
+
+                    <div class="course-badge">
+                        <span
+                            data-ar="اختيار عملي"
+                            data-en="Hands-on"
+                        >
+                            اختيار عملي
+                        </span>
+                    </div>
+
+                    <div class="course-number">02</div>
+
+                    <div class="course-icon">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+
+                    <span
+                        class="course-type"
+                        data-ar="OFFLINE"
+                        data-en="OFFLINE"
+                    >
+                        OFFLINE
+                    </span>
+
+                    <h2
+                        data-ar="الكورس الأوفلاين"
+                        data-en="Offline Course"
+                    >
+                        الكورس الأوفلاين
+                    </h2>
+
+                    <p
+                        data-ar="تجربة تدريب عملية تساعدك على تطبيق خطوات تنسيق الورد بشكل مباشر وفهم الخامات والأدوات."
+                        data-en="A hands-on training experience where you practice flower arrangement techniques and work directly with materials and tools."
+                    >
+                        تجربة تدريب عملية تساعدك على تطبيق خطوات تنسيق الورد بشكل مباشر وفهم الخامات والأدوات.
+                    </p>
+
+                    <ul class="course-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+
+                            <span
+                                data-ar="تطبيق عملي مباشر"
+                                data-en="Hands-on practice"
+                            >
+                                تطبيق عملي مباشر
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+
+                            <span
+                                data-ar="التعرف على الأدوات والخامات"
+                                data-en="Tools and materials"
+                            >
+                                التعرف على الأدوات والخامات
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+
+                            <span
+                                data-ar="تنفيذ تنسيقات فعلية"
+                                data-en="Real arrangements"
+                            >
+                                تنفيذ تنسيقات فعلية
+                            </span>
+                        </li>
+
+                    </ul>
+
+                    <div class="course-footer">
+
+                        <div>
+                            <small
+                                data-ar="السعر"
+                                data-en="Price"
+                            >
+                                السعر
+                            </small>
+
+                            <strong>XXX EGP</strong>
+                        </div>
+
+                        <button
+                            class="btn btn-primary register-course"
+                            type="button"
+                            data-course-ar="الكورس الأوفلاين"
+                            data-course-en="Offline Course"
+                            data-ar="التسجيل"
+                            data-en="Register"
+                        >
+                            التسجيل
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="cta-section section">
+        <div class="container">
+
+            <div class="cta-card reveal">
+
+                <span
+                    class="eyebrow"
+                    data-ar="START YOUR JOURNEY"
+                    data-en="START YOUR JOURNEY"
+                >
+                    START YOUR JOURNEY
+                </span>
+
+                <h2
+                    data-ar="عندك سؤال عن الكورس؟"
+                    data-en="Have a question about the courses?"
+                >
+                    عندك سؤال عن الكورس؟
+
+                </h2>
+
+                <p
+                    data-ar="تواصل معنا على واتساب لمعرفة التفاصيل ومواعيد التدريب."
+                    data-en="Contact us on WhatsApp for course details and available schedules."
+                >
+                    تواصل معنا على واتساب لمعرفة التفاصيل ومواعيد التدريب.
+                </p>
+
+                <a
+                    class="btn btn-light"
+                    href="https://wa.me/201043861996"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <span
+                        data-ar="تواصل معنا"
+                        data-en="Contact Us"
+                    >
+                        تواصل معنا
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<!-- COURSE MODAL -->
+<div
+    class="modal"
+    id="courseModal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="courseModalTitle"
+>
+    <div class="modal-overlay" data-close-modal></div>
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            type="button"
+            data-close-modal
+            aria-label="Close"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <span
+            class="eyebrow"
+            data-ar="COURSE REGISTRATION"
+            data-en="COURSE REGISTRATION"
+        >
+            COURSE REGISTRATION
+        </span>
+
+        <h2
+            id="courseModalTitle"
+            data-ar="بيانات التسجيل"
+            data-en="Registration Details"
+        >
+            بيانات التسجيل
+        </h2>
+
+        <p
+            class="modal-description"
+            data-ar="أكمل البيانات وسنجهز لك رسالة التسجيل على واتساب."
+            data-en="Fill in your details and we will prepare your WhatsApp registration message."
+        >
+            أكمل البيانات وسنجهز لك رسالة التسجيل على واتساب.
+        </p>
+
+
+        <form id="courseForm">
+
+            <input type="hidden" id="selectedCourse">
+
+            <div class="form-group">
+
+                <label
+                    for="courseName"
+                    data-ar="الاسم"
+                    data-en="Name"
+                >
+                    الاسم
+                </label>
+
+                <input
+                    id="courseName"
+                    type="text"
+                    required
+                    data-placeholder-ar="اكتب الاسم"
+                    data-placeholder-en="Enter your name"
+                    placeholder="اكتب الاسم"
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label
+                        for="courseAge"
+                        data-ar="العمر"
+                        data-en="Age"
+                    >
+                        العمر
+                    </label>
+
+                    <input
+                        id="courseAge"
+                        type="number"
+                        min="10"
+                        max="100"
+                        required
+                        data-placeholder-ar="العمر"
+                        data-placeholder-en="Age"
+                        placeholder="العمر"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        for="coursePhone"
+                        data-ar="رقم الهاتف"
+                        data-en="Phone"
+                    >
+                        رقم الهاتف
+                    </label>
+
+                    <input
+                        id="coursePhone"
+                        type="tel"
+                        required
+                        data-placeholder-ar="رقم الهاتف"
+                        data-placeholder-en="Phone number"
+                        placeholder="رقم الهاتف"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label
+                    for="courseNotes"
+                    data-ar="ملاحظات"
+                    data-en="Notes"
+                >
+                    ملاحظات
+                </label>
+
+                <textarea
+                    id="courseNotes"
+                    rows="4"
+                    data-placeholder-ar="أي سؤال أو تفاصيل إضافية..."
+                    data-placeholder-en="Any questions or additional details..."
+                    placeholder="أي سؤال أو تفاصيل إضافية..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary form-submit"
+                type="submit"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span
+                    data-ar="إرسال التسجيل على واتساب"
+                    data-en="Send Registration on WhatsApp"
+                >
+                    إرسال التسجيل على واتساب
+                </span>
+
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/201043861996"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+>
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span
+        data-ar="تواصل عبر واتساب"
+        data-en="Chat on WhatsApp"
+    >
+        تواصل عبر واتساب
+    </span>
+</a>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+
+            <img src="png/logo.png" alt="Elnorda">
+
+            <p
+                data-ar="تعلم، اصنع، وشارك جمال الورد."
+                data-en="Learn, create, and share the beauty of flowers."
+            >
+                تعلم، اصنع، وشارك جمال الورد.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3
+                data-ar="استكشف"
+                data-en="Explore"
+            >
+                استكشف
+            </h3>
+
+            <a
+                href="index.html"
+                data-ar="الرئيسية"
+                data-en="Home"
+            >
+                الرئيسية
+            </a>
+
+            <a
+                href="materials.html"
+                data-ar="الخامات"
+                data-en="Materials"
+            >
+                الخامات
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3
+                data-ar="تواصل"
+                data-en="Contact"
+            >
+                تواصل
+            </h3>
 
             <a
                 href="https://wa.me/201043861996"
                 target="_blank"
                 rel="noopener"
-                class="header-whatsapp"
             >
-                WhatsApp
+                <i class="fa-brands fa-whatsapp"></i>
+                +20 10 43861996
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@norda1022"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+                TikTok
             </a>
 
         </div>
 
     </div>
 
-</header>
 
+    <div class="container footer-bottom">
 
-<main>
-
-    <section class="page-hero">
-
-        <div class="container">
-
+        <span>
+            © <span id="currentYear"></span>
             <span
-                class="section-kicker"
-                data-i18n="courses-kicker"
+                data-ar="Elnorda. جميع الحقوق محفوظة."
+                data-en="Elnorda. All rights reserved."
             >
-                ELNORDA · ACADEMY
+                Elnorda. جميع الحقوق محفوظة.
             </span>
-
-
-            <h1 data-i18n="courses-title">
-                اتعلم فن تنسيق الزهور
-                <br>
-                بطريقة عملية وواضحة.
-            </h1>
-
-
-            <p data-i18n="courses-intro">
-                كورسات Elnorda مصممة لتبدأ من الأساسيات
-                وتتعلم خطوة بخطوة، أونلاين أو أوفلاين.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="inner-content section">
-
-        <div class="container">
-
-            <div class="course-grid">
-
-                <article class="course-card reveal">
-
-                    <div class="course-top">
-
-                        <span class="course-number">
-                            01
-                        </span>
-
-                        <span class="course-mode">
-                            ONLINE
-                        </span>
-
-                    </div>
-
-
-                    <div class="course-symbol">
-                        ✦
-                    </div>
-
-
-                    <h2 data-i18n="online-title">
-                        Online Course
-                    </h2>
-
-
-                    <p data-i18n="online-text">
-                        تعلم من مكانك، بمحتوى منظم يساعدك
-                        على فهم أساسيات تنسيق الزهور
-                        وتطبيقها عمليًا.
-                    </p>
-
-
-                    <ul>
-
-                        <li data-i18n="online-feature-one">
-                            أساسيات تنسيق الزهور
-                        </li>
-
-                        <li data-i18n="online-feature-two">
-                            اختيار الألوان والخامات
-                        </li>
-
-                        <li data-i18n="online-feature-three">
-                            تطبيقات عملية
-                        </li>
-
-                    </ul>
-
-
-                    <div class="course-footer">
-
-                        <strong>
-                            XXX EGP
-                        </strong>
-
-                        <button
-                            class="btn btn-primary course-order"
-                            type="button"
-                            data-course="Online Course"
-                            data-i18n="course-register"
-                        >
-                            التسجيل في الكورس
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <article class="course-card course-card-featured reveal">
-
-                    <div class="course-top">
-
-                        <span class="course-number">
-                            02
-                        </span>
-
-                        <span class="course-mode">
-                            OFFLINE
-                        </span>
-
-                    </div>
-
-
-                    <div class="course-symbol">
-                        ❋
-                    </div>
-
-
-                    <h2 data-i18n="offline-title">
-                        Offline Course
-                    </h2>
-
-
-                    <p data-i18n="offline-text">
-                        تجربة عملية داخل التدريب، مع شرح مباشر
-                        وتطبيق خطوة بخطوة على تنسيقات الزهور.
-                    </p>
-
-
-                    <ul>
-
-                        <li data-i18n="offline-feature-one">
-                            تدريب عملي مباشر
-                        </li>
-
-                        <li data-i18n="offline-feature-two">
-                            التعامل مع الخامات
-                        </li>
-
-                        <li data-i18n="offline-feature-three">
-                            تطبيق على أكثر من تصميم
-                        </li>
-
-                    </ul>
-
-
-                    <div class="course-footer">
-
-                        <strong>
-                            XXX EGP
-                        </strong>
-
-                        <button
-                            class="btn btn-primary course-order"
-                            type="button"
-                            data-course="Offline Course"
-                            data-i18n="course-register"
-                        >
-                            التسجيل في الكورس
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="cta-section section">
-
-        <div class="container">
-
-            <div class="cta-box reveal">
-
-                <span
-                    class="section-kicker"
-                    data-i18n="course-cta-kicker"
-                >
-                    START YOUR JOURNEY
-                </span>
-
-                <h2 data-i18n="course-cta-title">
-                    الكورس المناسب
-                    يبدأ بخطوة.
-                </h2>
-
-                <p data-i18n="course-cta-text">
-                    اختار نوع التدريب، وأرسل بيانات التسجيل
-                    ونكمل معاك التفاصيل على WhatsApp.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="container footer-inner">
-
-        <div class="footer-brand">
-
-            <img
-                src="./png/logo.png"
-                alt="Elnorda"
-            >
-
-            <p data-i18n="footer-text">
-                Flowers, details & beautiful moments.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a
-                href="./index.html"
-                data-i18n="nav-home"
-            >
-                الرئيسية
-            </a>
-
-            <a
-                href="./materials.html"
-                data-i18n="nav-materials"
-            >
-                الخامات
-            </a>
-
-            <a
-                href="https://wa.me/201043861996"
-                target="_blank"
-                rel="noopener"
-            >
-                WhatsApp
-            </a>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <span>
-                © <span id="year"></span> Elnorda
-            </span>
-
-            <span data-i18n="footer-rights">
-                جميع الحقوق محفوظة
-            </span>
-
-        </div>
+        </span>
+
+        <span
+            data-ar="Made with care."
+            data-en="Made with care."
+        >
+            Made with care.
+        </span>
 
     </div>
 
 </footer>
 
 
-<div
-    class="modal"
-    id="courseModal"
-    aria-hidden="true"
->
-
-    <div
-        class="modal-overlay"
-        data-close-modal
-    ></div>
-
-
-    <div
-        class="modal-dialog"
-        role="dialog"
-        aria-modal="true"
-    >
-
-        <button
-            class="modal-close"
-            type="button"
-            data-close-modal
-        >
-            ×
-        </button>
-
-
-        <span
-            class="section-kicker"
-            data-i18n="course-modal-kicker"
-        >
-            COURSE REGISTRATION
-        </span>
-
-
-        <h2 data-i18n="course-modal-title">
-            بيانات التسجيل
-        </h2>
-
-
-        <p
-            class="modal-subtitle"
-            data-i18n="course-modal-text"
-        >
-            أكمل البيانات وسيتم إرسالها إلى WhatsApp.
-        </p>
-
-
-        <form id="courseForm">
-
-            <input
-                type="hidden"
-                id="selectedCourse"
-            >
-
-
-            <label>
-
-                <span data-i18n="form-name">
-                    الاسم
-                </span>
-
-                <input
-                    type="text"
-                    id="courseName"
-                    required
-                    placeholder="الاسم"
-                >
-
-            </label>
-
-
-            <label>
-
-                <span data-i18n="form-age">
-                    السن
-                </span>
-
-                <input
-                    type="number"
-                    id="courseAge"
-                    min="10"
-                    required
-                    placeholder="السن"
-                >
-
-            </label>
-
-
-            <label>
-
-                <span data-i18n="form-phone">
-                    رقم الهاتف
-                </span>
-
-                <input
-                    type="tel"
-                    id="coursePhone"
-                    required
-                    placeholder="01xxxxxxxxx"
-                >
-
-            </label>
-
-
-            <label>
-
-                <span data-i18n="form-note">
-                    ملاحظات
-                </span>
-
-                <textarea
-                    id="courseNote"
-                    rows="4"
-                    placeholder="أي تفاصيل إضافية..."
-                ></textarea>
-
-            </label>
-
-
-            <button
-                class="btn btn-primary modal-submit"
-                type="submit"
-                data-i18n="course-submit"
-            >
-                إرسال بيانات التسجيل
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-
-<script src="./js/main.js"></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>
